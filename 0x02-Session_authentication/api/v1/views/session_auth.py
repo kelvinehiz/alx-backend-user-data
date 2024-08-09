@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Session authentication route module."""
+
 from flask import Blueprint, jsonify, request
 from models.user import User
 from api.v1.app import auth
@@ -7,6 +8,7 @@ import os
 
 # Define the Blueprint for session authentication
 session_auth = Blueprint('session_auth', __name__)
+
 
 @session_auth.route('/auth_session/login', methods=['POST'], strict_slashes=False)
 def login():
